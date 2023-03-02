@@ -1,0 +1,23 @@
+
+
+//User function Template for Java
+
+
+class Solution {
+    boolean hasArrayTwoCandidates(int arr[], int n, int x) {
+        // code here
+        int l, r;
+        Arrays.sort(arr);
+        l = 0;
+        r = n - 1;
+        while (l < r) {
+            if (arr[l] + arr[r] == x)
+                return true;
+            else if (arr[l] + arr[r] < x)
+                l++;
+            else 
+                r--;
+        }
+        return false;
+    }
+}
